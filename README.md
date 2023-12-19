@@ -10,7 +10,6 @@ Aim of this project is to build a fully remote accessible Ubuntu live system, th
 - launch cubic and select a working directory, click next
 - select the ISO file, maybe modify other options, click next
 - make changes to the virtual environment
-
 ```bash
 # make universe repo available
 apt-add-repository universe
@@ -107,3 +106,8 @@ gnome-extensions list
 vim /etc/dconf/db/local.d/00-extensions
 dconf update
 ```
+- when finished modifying the image using the root shell, click next
+- manually select/deselect packages, click next
+- select a kernel (most likely the highest one), click next
+- choose a compression method, click next
+- let cubic to it's work, click finish
