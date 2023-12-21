@@ -1,6 +1,12 @@
 # My custom Ubuntu live system
 Aim of this project is to build a fully remote accessible Ubuntu live system, that commes with various tools preinstalled for fixing, cloning and testing computers
 
+# Key features when booted
+- remote access via SSH, Samba, Gnome Remote Desktop (GRD)
+- custom packages installed
+- unique hostname based on the last octet, e.g. "ubuntu-live-ip-123" in case of IP "192.168.1.123"
+- changed to my countries common keyboard layout as default
+
 # Prerequisites
 - Ubuntu 22.04 maschine for generating the image
 - cubic installed on that system (https://github.com/PJ-Singh-001/Cubic)
