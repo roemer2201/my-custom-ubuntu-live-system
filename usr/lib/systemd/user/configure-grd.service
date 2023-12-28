@@ -1,0 +1,12 @@
+[Unit]
+Description=Configures Gnome Remote Desktop
+#Before=gnome-remote-desktop.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+StandardOutput=journal
+ExecStart=/home/ubuntu/.local/bin/configure-grd.sh
+
+[Install]
+WantedBy=default.target

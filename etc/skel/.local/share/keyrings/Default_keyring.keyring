@@ -1,0 +1,18 @@
+[keyring]
+display-name=Default keyring
+ctime=1696104407
+mtime=0
+lock-on-idle=false
+lock-after=false
+
+[1]
+item-type=0
+display-name=GNOME Remote Desktop RDP credentials
+secret={'username': <'ubuntu'>, 'password': <''>}
+mtime=1696104407
+ctime=1696104407
+
+[1:attribute0]
+name=xdg:schema
+type=string
+value=org.gnome.RemoteDesktop.RdpCredentials

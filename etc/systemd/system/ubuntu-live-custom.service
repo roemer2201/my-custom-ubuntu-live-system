@@ -1,0 +1,11 @@
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/etc/ubuntu-live-custom.sh
+
+[Unit]
+Wants=network-online.target
+After=network-online.target
+
+[Install]
+WantedBy=multi-user.target

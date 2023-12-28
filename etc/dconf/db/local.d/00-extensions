@@ -1,0 +1,3 @@
+[org/gnome/shell]
+enabled-extensions=['allowlockedremotedesktop@kamens.us']
+welcome-dialog-last-shown-version='42.9'
