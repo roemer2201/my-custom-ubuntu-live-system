@@ -1,0 +1,12 @@
+[Unit]
+Description=Configures Gnome Settings
+#Before=gnome-remote-desktop.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+StandardOutput=journal
+ExecStart=/home/ubuntu/.local/bin/configure-gnome.sh
+
+[Install]
+WantedBy=default.target
