@@ -77,7 +77,6 @@ mkdir -m 700 -p .local/bin
 vim .local/bin/configure-grd.sh
 # make this script run as systemd user service
 cat  /usr/lib/systemd/user/configure-grd.service
-ll .config/systemd/user/gnome-session.target.wants/
 # create keyring files, which store the credentials that allow access to GRD
 mkdir -p /etc/skel/.local/share/keyrings
 cd /etc/skel/.local/share/keyrings
