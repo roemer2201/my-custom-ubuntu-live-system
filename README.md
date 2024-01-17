@@ -22,7 +22,7 @@ apt-add-repository universe
 apt update
 
 # install all desired tools
-apt install pv vim dislocker net-tools nfs-common sysstat iotop nvme-cli open-vm-tools
+apt install pv vim dislocker net-tools nfs-common sysstat iotop nvme-cli open-vm-tools git
 
 # fix the Ubuntu 22.04 live bug, where network access with dhcp does not work out of the box
 # this is a hardcoded fix, I did not investigate deeper to make a propper change
