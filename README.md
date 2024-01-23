@@ -119,3 +119,16 @@ dconf update
 - select a kernel (most likely the highest one), click next
 - choose a compression method, click next
 - let cubic do it's work, click finish
+
+# ToDo -> Implementation
+- add smb share to /media
+```
+[media]
+   path = /media/ubuntu
+   comment = Media Directory
+   browseable = yes
+   read only = no
+   create mask = 0700
+   directory mask = 0700
+   guest ok = yes
+```
