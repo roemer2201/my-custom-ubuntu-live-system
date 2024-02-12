@@ -22,7 +22,14 @@ apt-add-repository universe
 apt update
 
 # install all desired tools
-apt install pv vim dislocker net-tools nfs-common sysstat iotop nvme-cli open-vm-tools git smartmontools ethtool htop bashtop bmon slurm tcptrack nmon nethogs
+# common tools
+apt install vim git open-vm-tools
+# performance tools
+apt install pv sysstat iotop htop bashtop 
+# network tools
+apt install ethtool tcptrack nmon nethogs bmon slurm
+# disk-tools
+apt install dislocker net-tools nfs-common nvme-cli smartmontools     
 # add external repositories with needed tools
 apt-add-repository ppa:tomtomtom/woeusb
 apt install woeusb-frontend-wxgtk woeusb
