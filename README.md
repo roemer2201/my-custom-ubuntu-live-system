@@ -123,6 +123,18 @@ touch /etc/dconf/db/local.d/00-extensions
 gnome-extensions list
 vim /etc/dconf/db/local.d/00-extensions
 dconf update
+# Added tor to the live system
+apt install apt-transport-https
+cd /tmp/
+wget https://deb.torproject.org/torproject.org/pool/main/d/deb.torproject.org-keyring/deb.torproject.org-keyring_2022.04.27.1_all.deb
+apt install ./deb.torproject.org-keyring_2022.04.27.1_all.deb
+sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/deb.torproject.org-keyring.gpg] https://deb.torproject.org/torproject.org $(lsb_release -sc) main" >> /etc/apt/sources.list.d/tor-project.list'
+apt update
+apt install tor
+systemctl disable tor # Disable it by default, so only launch when needed
+wget https://dist.torproject.org/torbrowser/13.0.14/tor-browser-linux-x86_64-13.0.14.tar.xz
+cd /opt/
+tar xf /tmp/tor-browser-linux-x86_64-13.0.14.tar.xz 
 ```
 - when finished modifying the image using the root shell, click next
 - manually select/deselect packages, click next
