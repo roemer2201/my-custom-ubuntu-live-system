@@ -23,7 +23,7 @@ apt update
 
 # install all desired tools
 # common tools
-apt install vim git open-vm-tools
+apt install vim git open-vm-tools screen
 # performance tools
 apt install pv sysstat iotop htop bashtop 
 # network tools
