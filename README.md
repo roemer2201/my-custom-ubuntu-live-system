@@ -27,7 +27,7 @@ apt install vim git open-vm-tools screen
 # performance tools
 apt install pv sysstat iotop htop bashtop 
 # network tools
-apt install ethtool tcptrack nmon nethogs bmon slurm
+apt install ethtool tcptrack nmon nethogs bmon slurm netperf
 # disk-tools
 apt install dislocker net-tools nfs-common nvme-cli smartmontools     
 # add external repositories with needed tools
@@ -154,3 +154,4 @@ tar xf /tmp/tor-browser-linux-x86_64-13.0.14.tar.xz
    directory mask = 0700
    guest ok = yes
 ```
+- launch netserver automatically
