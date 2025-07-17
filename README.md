@@ -27,7 +27,7 @@ apt install vim git open-vm-tools screen
 # performance tools
 apt install pv sysstat iotop htop bashtop 
 # network tools
-apt install ethtool tcptrack nmon nethogs bmon slurm netperf
+apt install ethtool tcptrack nmon nethogs bmon slurm netperf socat
 # disk-tools
 apt install dislocker net-tools nfs-common nvme-cli smartmontools     
 # add external repositories with needed tools
