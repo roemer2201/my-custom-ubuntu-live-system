@@ -4,7 +4,7 @@ Aim of this project is to build a fully remote accessible Ubuntu live system, th
 # Key features when booted
 - remote access via SSH, Samba, Gnome Remote Desktop (GRD)
 - custom packages installed
-- unique hostname based on the last octet, e.g. "ubuntu-live-ip-123" in case of IP "192.168.1.123"
+- unique hostname based on network IP or product_uuid, e.g. "ucl-192.168.1.123" in case of IP "192.168.1.123" or "ucl-abcd1234"
 - changed to my countries common keyboard layout as default
 
 # Prerequisites
@@ -27,7 +27,7 @@ apt install vim git open-vm-tools screen
 # performance tools
 apt install pv sysstat iotop htop bashtop 
 # network tools
-apt install ethtool tcptrack nmon nethogs bmon slurm netperf socat
+apt install ethtool tcptrack nmon nethogs bmon slurm netperf socat ipmitool
 # disk-tools
 apt install dislocker net-tools nfs-common nvme-cli smartmontools     
 # add external repositories with needed tools
