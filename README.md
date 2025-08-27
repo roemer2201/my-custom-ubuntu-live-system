@@ -138,9 +138,48 @@ tar xf /tmp/tor-browser-linux-x86_64-13.0.14.tar.xz
 ```
 - when finished modifying the image using the root shell, click next
 - manually select/deselect packages, click next
-- select a kernel (most likely the highest one), click next
+- select a kernel (most likely the highest one)
+- click "boot" in the top middle of the cubic window to make changes to the grub boot loader of the live cd (do not show Ubiquity install dialogue, set default keyboard layout
+  - grub.cfg (only modified entries displayed)
+```
+menuentry "Try Ubuntu custom without installing (DE)" {
+	set gfxpayload=keep
+	linux	/casper/vmlinuz boot=casper file=/cdrom/preseed/ubuntu.seed quiet splash debian-installer/locale=de_DE.UTF-8 console-setup/layoutcode=de keyboard-configuration/layoutcode=de keyboard-configuration/variant=German --- 
+	initrd	/casper/initrd.gz
+}
+menuentry "Try Ubuntu custom without installing" {
+	set gfxpayload=keep
+	linux	/casper/vmlinuz boot=casper file=/cdrom/preseed/ubuntu.seed quiet splash --- 
+	initrd	/casper/initrd.gz
+}
+menuentry "Try Ubuntu custom without installing (safe graphics)" {
+	set gfxpayload=keep
+	linux	/casper/vmlinuz boot=casper nomodeset file=/cdrom/preseed/ubuntu.seed quiet splash --- 
+	initrd	/casper/initrd.gz
+}
+```
+  - loopback.cfg (only modified entries displayed)
+```
+menuentry "Try Ubuntu custom without installing (DE)" {
+	set gfxpayload=keep
+	linux	/casper/vmlinuz boot=casper file=/cdrom/preseed/ubuntu.seed iso-scan/filename=${iso_path} quiet splash debian-installer/locale=de_DE.UTF-8 console-setup/layoutcode=de keyboard-configuration/layoutcode=de keyboard-configuration/variant=German --- 
+	initrd	/casper/initrd.gz
+}
+menuentry "Try Ubuntu custom without installing" {
+	set gfxpayload=keep
+	linux	/casper/vmlinuz boot=casper file=/cdrom/preseed/ubuntu.seed iso-scan/filename=${iso_path} quiet splash --- 
+	initrd	/casper/initrd.gz
+}
+menuentry "Try Ubuntu custom without installing (safe graphics)" {
+	set gfxpayload=keep
+	linux	/casper/vmlinuz boot=casper nomodeset file=/cdrom/preseed/ubuntu.seed iso-scan/filename=${iso_path} quiet splash --- 
+	initrd	/casper/initrd.gz
+}
+```
+- click next
 - choose a compression method, click next
 - let cubic do it's work, click finish
+
 
 # ToDo -> Implementation
 - add smb share to /media
