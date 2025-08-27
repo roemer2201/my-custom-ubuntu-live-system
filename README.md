@@ -182,15 +182,4 @@ menuentry "Try Ubuntu custom without installing (safe graphics)" {
 
 
 # ToDo -> Implementation
-- add smb share to /media
-```
-[media]
-   path = /media/ubuntu
-   comment = Media Directory
-   browseable = yes
-   read only = no
-   create mask = 0700
-   directory mask = 0700
-   guest ok = yes
-```
 - launch netserver automatically
