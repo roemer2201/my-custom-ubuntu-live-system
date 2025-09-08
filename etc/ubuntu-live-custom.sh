@@ -8,10 +8,13 @@ if [ -z "$HOSTIP" ]; then
 	else
 		HOSTID="no-uuid"
 	fi
-	hostnamectl set-hostname "ucl-$HOSTID"
+	NEWHOSTNAME="ucl-$HOSTID"
+	hostnamectl set-hostname "$NEWHOSTNAME"
 else
-	hostnamectl hostname "ucl-$HOSTIP"
+	NEWHOSTNAME="ucl-$HOSTIP"
+	hostnamectl hostname "$NEWHOSTNAME"
 fi
+[ -f /etc/hosts ] && sed -i -E "s/^(127\.0\.1\.1[[:space:]]+).*/\1$NEWHOSTNAME/" /etc/hosts
 # restart samba to use the new hostname
 systemctl restart smbd
 # create RAM-disk for convenient temporary storage
