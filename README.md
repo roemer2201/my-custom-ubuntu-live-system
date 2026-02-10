@@ -23,11 +23,11 @@ apt update
 
 # install all desired tools
 # common tools
-apt install vim git open-vm-tools screen xxhash minicom
+apt install vim git open-vm-tools screen xxhash minicom autossh
 # performance tools
 apt install pv sysstat iotop htop bashtop 
 # network tools
-apt install ethtool tcptrack nmon nethogs bmon slurm netperf socat ipmitool
+apt install ethtool tcptrack nmon nethogs bmon slurm netperf socat ipmitool wireshark
 # disk-tools
 apt install dislocker net-tools nfs-common nvme-cli smartmontools     
 # add external repositories with needed tools
